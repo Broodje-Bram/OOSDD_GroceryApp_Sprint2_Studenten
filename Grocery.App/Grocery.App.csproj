@@ -57,11 +57,13 @@
 	</ItemGroup>
 
 	<ItemGroup>
-	  <Compile Remove="Views\LoginView.xaml.cs" />
-	</ItemGroup>
-
-	<ItemGroup>
-	  <MauiXaml Remove="Views\LoginView.xaml" />
+		<Compile Update="Views\LoginView.xaml.cs">
+			<DependentUpon>LoginView.xaml</DependentUpon>
+		</Compile>
+		
+		<MauiXaml Update="Views\LoginView.xaml">
+			<Generator>MSBuild:Compile</Generator>
+		</MauiXaml>
 	</ItemGroup>
 
 	<ItemGroup>
